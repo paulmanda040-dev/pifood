@@ -1,0 +1,1188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 7%;
+
+    color: white;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #e9a000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.social-icons a:hover {
+    color: #e9a000;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/cuisine.webp");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-content p {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-style: italic;
+}
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+    font-size: 80px;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    background: white;
+    color: #222;
+
+    padding: 14px 35px;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #e9a000;
+    color: white;
+}
+
+
+/* INTRO */
+
+.intro {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 80px;
+}
+
+.intro-text {
+    flex: 1;
+    text-align: center;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.subtitle {
+    color: #d99a00;
+
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.intro h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.intro-text p:not(.subtitle) {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.intro-text a {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.intro-text a:hover {
+    color: #e9a000;
+}
+
+
+/* DISCOVER */
+
+.discover {
+    height: 450px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/breakfast.webp");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.discover-content p {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.discover-content h2 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    letter-spacing: 4px;
+}
+
+
+/* PRODUCTS PREVIEW */
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 100px 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #d99a00;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-item img {
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+.menu-item h3 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #777;
+}
+
+
+/* =========================
+   ABOUT / PRODUCT / CONTACT
+========================= */
+
+.simple-page {
+    background: #faf8f1;
+}
+
+
+/* GREEN HEADER */
+
+.about-header {
+    background: #1d5130;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 20px 20px;
+}
+
+.about-header h1 {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+.about-header p {
+    color: #f5c52b;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-weight: bold;
+}
+
+
+/* NAVIGATION */
+
+.about-nav {
+    background: #103b22;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 6px;
+}
+
+.about-nav a {
+    color: white;
+
+    padding: 10px 16px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.about-nav a:hover,
+.about-nav a.active {
+    background: #f5c52b;
+
+    color: #111;
+
+    border-radius: 3px;
+}
+
+
+/* ABOUT */
+
+.about-page {
+    max-width: 820px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+}
+
+.about-page section {
+    margin-bottom: 30px;
+}
+
+.about-page h2 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    color: #70401f;
+
+    border-bottom: 2px solid #e5b523;
+
+    padding-bottom: 8px;
+
+    margin-bottom: 12px;
+}
+
+.about-page p {
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+}
+
+.about-page ul {
+    padding-left: 20px;
+}
+
+.about-page li {
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+/* MISSION */
+
+.mission {
+    background: white;
+
+    border-left: 4px solid #1d5130;
+
+    padding: 20px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.mission p {
+    margin: 0;
+}
+
+
+/* =========================
+   PRODUCT PAGE
+========================= */
+
+.product-page {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 25px;
+}
+
+.product-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.product-heading h2 {
+    font-family: Georgia, serif;
+
+    color: #70401f;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.product-heading p {
+    color: #666;
+}
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.product-card img {
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+
+    text-align: center;
+}
+
+.product-info h3 {
+    font-family: Georgia, serif;
+
+    color: #70401f;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* SERVICES */
+
+.services {
+    margin-top: 60px;
+
+    text-align: center;
+}
+
+.services h2 {
+    font-family: Georgia, serif;
+
+    color: #70401f;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.service-grid div {
+    background: white;
+
+    padding: 25px;
+
+    border-top: 3px solid #e5b523;
+}
+
+.service-grid h3 {
+    color: #1d5130;
+
+    margin-bottom: 8px;
+}
+
+.service-grid p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 50px 25px;
+}
+
+.contact-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.contact-heading h2 {
+    font-family: Georgia, serif;
+
+    color: #70401f;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.contact-heading p {
+    color: #666;
+}
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+    background: white;
+
+    padding: 30px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-family: Georgia, serif;
+
+    color: #70401f;
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #555;
+
+    margin-bottom: 18px;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #1d5130;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #e5b523;
+
+    color: #111;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.about-footer {
+    background: #103b22;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 18px;
+
+    margin-top: 20px;
+}
+
+.about-footer p {
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro-text,
+    .intro-image {
+        width: 100%;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /* HOME */
+
+    .header {
+        position: relative;
+
+        background: #111;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero-content p {
+        font-size: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .intro {
+        padding: 70px 20px;
+    }
+
+    .intro h2 {
+        font-size: 34px;
+    }
+
+    .discover {
+        height: 350px;
+    }
+
+    .discover-content h2 {
+        font-size: 40px;
+    }
+
+    .menu {
+        padding: 70px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+
+    /* OTHER PAGES */
+
+    .about-header h1 {
+        font-size: 27px;
+    }
+
+    .about-nav {
+        flex-wrap: wrap;
+    }
+
+    .about-nav a {
+        font-size: 12px;
+
+        padding: 8px 10px;
+    }
+
+    .about-page {
+        padding: 25px 18px;
+    }
+
+    .product-page,
+    .contact-page {
+        padding: 35px 18px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   OTHER PAGE DESIGN
+========================= */
+
+.page-banner {
+    height: 450px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/cuisine.webp");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.page-banner-content p {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.page-banner-content h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    letter-spacing: 4px;
+}
+
+
+/* ABOUT */
+
+.about-page {
+    max-width: 900px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.about-page section {
+    margin-bottom: 45px;
+}
+
+.about-page h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #222;
+    border-bottom: 2px solid #e9a000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-page ul {
+    padding-left: 25px;
+}
+
+.about-page li {
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.mission {
+    border-left: 3px solid #e9a000;
+    padding: 20px 25px;
+    background: #f8f8f8;
+}
+
+.mission p {
+    margin: 0;
+}
+
+
+/* PRODUCT */
+
+.product-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.product-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.product-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.product-heading > p:last-child {
+    color: #777;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #777;
+}
+
+
+/* SERVICES */
+
+.services {
+    margin-top: 100px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-grid div {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid #e9a000;
+}
+
+.service-grid h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-grid p {
+    color: #777;
+}
+
+
+/* CONTACT */
+
+.contact-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.contact-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contact-heading > p:last-child {
+    color: #777;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info,
+.contact-form {
+    padding: 35px;
+    background: #fafafa;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.contact-info strong {
+    color: #222;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #e9a000;
+}
+
+.contact-form button {
+    border: none;
+    background: #e9a000;
+    color: white;
+    padding: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #222;
+}
+
+
+/* FOOTER */
+
+.page-footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.page-footer p {
+    font-size: 12px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .page-banner {
+        height: 350px;
+    }
+
+    .page-banner-content p {
+        font-size: 22px;
+    }
+
+    .page-banner-content h1 {
+        font-size: 40px;
+    }
+
+    .about-page,
+    .product-page,
+    .contact-page {
+        padding: 60px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+.price {
+    display: block;
+    margin-top: 15px;
+    color: #e9a000;
+    font-size: 18px;
+    font-weight: bold;
+}
